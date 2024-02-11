@@ -1,0 +1,58 @@
+body {
+    background-color: #36393f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #202225;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.canvas-container {
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+.chart-legend {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.chart-legend li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.chart-legend li span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.chart-legend li.price span {
+    background-color: #7289da;
+}
+
+.chart-legend li.label {
+    color: #ccc;
+    font-size: 14px;
+}
