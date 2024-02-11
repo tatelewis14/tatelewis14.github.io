@@ -105,6 +105,4 @@ getData()
 .catch(err => {
     console.log('Error rendering data: ' + err)
 })
-
-
 })
