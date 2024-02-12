@@ -9,7 +9,7 @@ const apiKey =
 async function getData(coin) { //Gets coin data based on search inputs
   let endpoint
   switch(selection.value) {
-    case 'name':
+    case 'Name':
       endpoint=`search=${coin}`
       break;
     case 'UUID':
@@ -156,6 +156,7 @@ function showAutoComplete(options) {
       search.value = option.name
       try {
         renderData(option.name)
+        console.log(`Autocomplete tried to render ${option.name}`)
       } catch (err) {
         console.log(`Error rendering autocomplete data: ${err}`)
       }
@@ -167,17 +168,21 @@ function showAutoComplete(options) {
       search.value = option.uuid
       try {
         renderData(option.uuid)
+        console.log(`Autocomplete tried to render ${option.uuid}`)
+
       } catch (err) {
         console.log(`Error rendering autocomplete data: ${err}`)
       }
     })
     break;
     case 'Symbol':
-      let droption = appendElement('p', 'option', option.symbol, dropdown)
+     droption = appendElement('p', 'option', option.symbol, dropdown)
     droption.addEventListener('click', e => {
       search.value = option.symbol
       try {
         renderData(option.symbol)
+        console.log(`Autocomplete tried to render ${option.symbol}`)
+
       } catch (err) {
         console.log(`Error rendering autocomplete data: ${err}`)
       }
@@ -185,6 +190,9 @@ function showAutoComplete(options) {
     }
     
 })
+if(!search.value) {
+  dropdown.innerHTML=''
+}
 }
 document.addEventListener('click', e => {
   if (!search.contains(e.target) && !dropdown.contains(e.target)) {

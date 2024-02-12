@@ -102,7 +102,7 @@ button:hover {
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
-  background-color: #36393f; /* Match dropdown background with overall styling */
+  background-color: #36393f; 
   border: 1px solid #ccc;
   border-radius: 5px;
   width: calc(100% - 22px);
