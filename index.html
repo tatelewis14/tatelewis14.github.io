@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" type="image/x-icon">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" type="image/x-icon">
     <title>CryptoData</title>
   </head>
   <body>
@@ -11,8 +13,14 @@
     <script src = './script.js' defer></script>
     </script>
     <form id="form">
+      <select name="search-category" id="search-category">
+        <option value="Name">Name</option>
+        <option value="UUID">UUID</option>
+        <option value="Symbol">Symbol</option>
+      </select>
       <input type="search" name="coin-search" id="search">
       <button type="submit">Search!</button>
+      <div id="dropdown"></div>
     </form>
     <div id="data-container"></div>
   </body>

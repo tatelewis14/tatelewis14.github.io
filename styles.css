@@ -13,23 +13,34 @@ h1 {
   text-align: center;
 }
 
-#search {
+#form {
+  position: relative;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+}
+
+#search,
+#search-category {
   background-color: #36393f;
   border: 1px solid #ccc;
   color: #fff;
   padding: 10px;
-  margin: 20px auto;
-  display: block;
-  width: 80%;
   border-radius: 5px;
+  flex-grow: 1;
 }
 
-#search:focus {
-  outline: none;
+#search {
+  margin-right: 10px;
 }
 
-#form {
-  text-align: center;
+#search-category {
+  width: 150px;
 }
 
 button {
@@ -62,13 +73,17 @@ button:hover {
   width: 200px;
 }
 
+.coin:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 .coin img {
   display: block;
   margin: 0 auto;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .coin p {
@@ -81,4 +96,26 @@ button:hover {
 
 .hour-volume {
   font-size: 0.9em;
+}
+
+#dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #36393f; /* Match dropdown background with overall styling */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f1f1f1;
 }
